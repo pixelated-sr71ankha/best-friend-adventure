@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Best Friend Adventure ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- MUSIC -->
+<!-- ========================= -->
+
+<audio id="bgMusic" loop>
+
+    <source src="music/wetHands.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+<audio id="clickSound">
+
+    <source src="sounds/click.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+<audio id="successSound">
+
+    <source src="sounds/success.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+<!-- ========================= -->
+<!-- PARTICLES -->
+<!-- ========================= -->
+
+<div id="particles"></div>
+
+<!-- ========================= -->
+<!-- TOP BAR -->
+<!-- ========================= -->
+
+<header>
+
+    <div class="logo">
+
+        ❤️ Best Friend Adventure
+
+    </div>
+
+    <button id="musicBtn">
+
+        🎵
+
+    </button>
+
+</header>
+
+<!-- ========================= -->
+<!-- LANDING PAGE -->
+<!-- ========================= -->
+
+<section id="landing"
+         class="page active">
+
+    <div class="glass">
+
+        <h1>
+
+            ✨ Best Friend Adventure ✨
+
+        </h1>
+
+        <h2 id="typing"></h2>
+
+        <button id="startBtn">
+
+            Start Adventure 🚀
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GIFT ROOM -->
+<!-- ========================= -->
+
+<section id="giftRoom"
+         class="page">
+
+    <h1>
+
+        🎁 Gift Room
+
+    </h1>
+
+    <p>
+
+        Open every gift to continue.
+
+    </p>
+
+    <div class="giftGrid">
+
+        <div class="gift"
+             data-id="0">
+
+            🎁
+
+        </div>
+
+        <div class="gift"
+             data-id="1">
+
+            🎁
+
+        </div>
+
+        <div class="gift"
+             data-id="2">
+
+            🎁
+
+        </div>
+
+        <div class="gift"
+             data-id="3">
+
+            🎁
+
+        </div>
+
+        <div class="gift"
+             data-id="4">
+
+            🎁
+
+        </div>
+
+        <div class="gift"
+             data-id="5">
+
+            🎁
+
+        </div>
+
+    </div>
+
+    <h3 id="giftProgress">
+
+        0 / 6 Gifts Opened
+
+    </h3>
+
+    <button id="museumUnlock">
+
+        Enter Meme Museum 😂
+
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- POPUP -->
+<!-- ========================= -->
+
+<div id="popup">
+
+    <div class="popupCard">
+
+        <span id="closePopup">
+
+            &times;
+
+        </span>
+
+        <h2 id="popupTitle"></h2>
+
+        <img id="popupImage" alt="Popup Image">
+
+        <p id="popupText"></p>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- MEME MUSEUM -->
+<!-- ========================= -->
+
+<section id="museum"
+         class="page">
+
+    <h1>
+
+        🖼️ Meme Museum
+
+    </h1>
+
+    <p>
+
+        Click every masterpiece.
+
+    </p>
+
+    <div class="museumGrid">
+
+        <div class="frame" data-id="0">
+
+            <img src="images/meme1.jpg" alt="Meme 1">
+
+            <h3>
+
+                Chaos Level 1
+
+            </h3>
+
+        </div>
+
+        <div class="frame" data-id="1">
+
+            <img src="images/meme2.jpg" alt="Meme 2">
+
+            <h3>
+
+                Braincell Missing
+
+            </h3>
+
+        </div>
+
+        <div class="frame" data-id="2">
+
+            <img src="images/meme3.jpg" alt="Meme 3">
+
+            <h3>
+
+                Average Conversation
+
+            </h3>
+
+        </div>
+
+        <div class="frame" data-id="3"> 
+
+            <img src="images/meme4.jpg" alt="Meme 4">
+
+            <h3>
+
+                Gaming Night
+
+            </h3>
+
+        </div>
+
+        <div class="frame" data-id="4" >
+
+            <img src="images/meme5.jpg " alt="Meme 5">
+
+            <h3>
+
+                Certified Chaos
+
+            </h3>
+
+        </div>
+
+        <div class="frame" data-id="5">
+
+            <img src="images/meme6.jpg" alt="Meme 6">
+
+            <h3>
+
+                Friendship Energy
+
+            </h3>
+
+        </div>
+
+    </div>
+
+    <button id="arcadeUnlock">
+
+        Friendship Arcade 🎮
+
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- FRIENDSHIP ARCADE -->
+<!-- ========================= -->
+
+<section id="arcade"
+         class="page">
+
+    <h1>🎮 Friendship Arcade</h1>
+
+    <p>Complete every game to unlock the final letter.</p>
+
+    <div class="gameGrid">
+
+        <div class="gameCard" id="wheelGame">
+
+            <div class="icon">🎡</div>
+
+            <h2>Spin The Wheel</h2>
+
+            <p>Win a random friendship prize!</p>
+
+        </div>
+
+        <div class="gameCard" id="giftGame">
+
+            <div class="icon">🎁</div>
+
+            <h2>Catch The Gift</h2>
+
+            <p>Catch the moving gift!</p>
+
+        </div>
+
+        <div class="gameCard" id="quizGame">
+
+            <div class="icon">🧠</div>
+
+            <h2>Friendship Quiz</h2>
+
+            <p>Let's see how lucky you are 😏</p>
+
+        </div>
+
+    </div>
+
+    <h3 id="arcadeProgress">
+
+        0 / 3 Games Completed
+
+    </h3>
+
+    <button id="achievementBtn">
+
+        🏆 Achievement Room
+
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- SPIN WHEEL -->
+<!-- ========================= -->
+
+<section id="wheelPage"
+         class="page">
+
+    <h1>🎡 Spin The Wheel</h1>
+
+    <div class="pointer">
+
+        ▼
+
+    </div>
+
+    <canvas id="wheelCanvas"
+            width="500"
+            height="500">
+
+    </canvas>
+
+    <button id="spinBtn">
+
+        SPIN
+
+    </button>
+
+    
+
+    <button id="wheelBack">
+
+        Return To Arcade
+
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- CATCH THE GIFT -->
+<!-- ========================= -->
+
+<section id="giftPage"
+         class="page">
+
+    <h1>
+
+        🎁 Catch The Gift
+
+    </h1>
+
+    <p>
+
+        Try catching it 😂
+
+    </p>
+
+    <div id="giftArena">
+
+        <div id="movingGift">
+
+            🎁
+
+        </div>
+
+    </div>
+
+    <h2 id="giftStatus"></h2>
+
+    <button id="giftBack">
+
+        Return To Arcade
+
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- QUIZ -->
+<!-- ========================= -->
+
+<section id="quizPage"
+         class="page">
+
+    <h1>
+
+        🧠 Friendship Quiz
+
+    </h1>
+
+    <div id="quizCard">
+
+        <h2 id="question"></h2>
+
+        <div id="answers">
+
+        </div>
+
+    </div>
+
+    <h3 id="quizScore">
+
+        Score : 0
+
+    </h3>
+
+    <button id="quizBack">
+
+        Return To Arcade
+
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- ACHIEVEMENTS -->
+<!-- ========================= -->
+
+<section id="achievementPage"
+         class="page">
+
+    <h1>
+
+        🏆 Achievements
+
+    </h1>
+
+    <div class="achievementGrid">
+
+        <div class="badge"
+             id="badgeWheel">
+
+            🎡<br>
+
+            Lucky Spinner
+
+        </div>
+
+        <div class="badge"
+             id="badgeGift">
+
+            🎁<br>
+
+            Gift Hunter
+
+        </div>
+
+        <div class="badge"
+             id="badgeQuiz">
+
+            🧠<br>
+
+            Quiz Master
+
+        </div>
+
+        <div class="badge"
+             id="badgeFriend">
+
+            ❤️<br>
+
+            Ultimate Best Friend
+
+        </div>
+
+    </div>
+
+    <button id="letterBtn">
+
+        💌 Read Secret Letter
+
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- LETTER -->
+<!-- ========================= -->
+
+<section id="letterPage"
+         class="page">
+
+    <div class="envelope">
+
+        <div class="letter">
+
+            <h1>
+
+                💌 Dear Bestie,
+
+            </h1>
+
+            <p id="letterText">
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <button id="endingBtn">
+
+        🌌 Final Surprise
+
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- ENDING -->
+<!-- ========================= -->
+
+<section id="endingPage"
+         class="page">
+
+    <div id="stars"></div>
+
+    <h1 id="endingTitle">
+
+        ❤️ Thank You ❤️
+
+    </h1>
+
+    <h2 id="endingSubtitle">
+
+        Happy Friendship Day
+
+    </h2>
+
+    <canvas id="fireworks">
+
+    </canvas>
+
+    <button id="restartBtn">
+
+        🔄 Play Again
+
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
+
+<script>
+window.onload = () => {
+    console.log("Best Friend Adventure Loaded ❤️");
+};
+</script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
